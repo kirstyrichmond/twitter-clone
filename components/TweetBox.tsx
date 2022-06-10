@@ -19,7 +19,7 @@ interface Props {
 function TweetBox({ setTweets }: Props) {
   const [input, setInput] = useState<string>('')
   const [image, setImage] = useState<string>('')
-  const imageInputRef = useRef<HTMLOptionElement>(null)
+  const imageInputRef = useRef<HTMLInputElement | null>(null)
 
   const { data: session } = useSession()
   const [imageUrlBoxIsOpen, setImageUrlBoxIsOpen] = useState<boolean>(false)

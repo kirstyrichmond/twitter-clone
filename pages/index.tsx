@@ -1,4 +1,3 @@
-import axios from 'axios'
 import type { GetServerSideProps, GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
