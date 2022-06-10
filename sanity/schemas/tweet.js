@@ -29,11 +29,5 @@ export default {
       title: 'Tweet image',
       type: 'string',
     },
-    {
-      name: 'likes',
-      title: 'Likes',
-      type: 'number',
-      initialValue: 0,
-    },
   ],
 }

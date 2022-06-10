@@ -31,5 +31,4 @@ export type CommentBody = {
   tweetId: string
   username: string
   profileImg: string
-  likes: number
 }
