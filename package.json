@@ -38,6 +38,7 @@
     "eslint": "^8.18.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^26.5.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
@@ -55,6 +56,10 @@
   "eslintConfig": {
     "extends": [
       "@imaginary-cloud/react",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended",
+      "plugin:prettier/recommended",
+      "plugin:prettier/@typescript-eslint",
       "next",
       "prettier"
     ],
@@ -66,8 +71,18 @@
             "^(all|part):"
           ]
         }
-      ]
+      ],
+      "react/react-in-jsx-scope": "off"
     }
   },
-  "prettier": "@imaginary-cloud/prettier-config"
+  "prettier": "@imaginary-cloud/prettier-config",
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "prettier"
+  ],
+  "globals": {
+    "React": "writable"
+  }
 }
