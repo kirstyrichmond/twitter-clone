@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: 'plugin:react/recommended',
+  extends: 'next/core-web-vitals',
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {

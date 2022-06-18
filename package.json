@@ -4,7 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ./ --ignore-path .gitignore",
+    "lint": "next lint",
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
@@ -13,6 +13,7 @@
     "@sanity/image-url": "^1.0.1",
     "add": "^2.0.6",
     "data-urls": "^3.0.2",
+    "eslint-config-next": "^12.1.6",
     "next": "latest",
     "next-auth": "^4.3.4",
     "next-sanity": "^0.5.2",

@@ -74,11 +74,13 @@ function TweetBox({ setTweets }: Props) {
 
   return (
     <div className="flex p-5 space-x-2">
-      <img
-        className="object-cover mt-4 rounded-full h-14 w-14"
-        src={session?.user?.image || 'https://links.papareact.com/gll'}
-        alt="user picture"
-      />
+      <picture>
+        <img
+          className="object-cover mt-4 rounded-full h-14 w-14"
+          src={session?.user?.image || 'https://links.papareact.com/gll'}
+          alt="user picture"
+        />
+      </picture>
       <div className="flex items-center flex-1 pl-2">
         <form className="flex flex-col flex-1">
           <input
@@ -125,11 +127,13 @@ function TweetBox({ setTweets }: Props) {
             </form>
           )}
           {image && (
-            <img
-              src={image}
-              alt="tweet image"
-              className="object-contain w-full h-40 mt-10 shadow-lg rounded-xl"
-            />
+            <picture>
+              <img
+                src={image}
+                alt="tweet image"
+                className="object-contain w-full h-40 mt-10 shadow-lg rounded-xl"
+              />
+            </picture>
           )}
         </form>
       </div>

@@ -28,6 +28,7 @@ function Tweet({ tweet }: Props) {
 
   useEffect(() => {
     refreshComments()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -59,11 +60,13 @@ function Tweet({ tweet }: Props) {
   return (
     <div className="flex flex-col p-5 space-x-3 border-gray-100 border-y">
       <div className="flex space-x-3">
-        <img
-          src={tweet.profileImg}
-          alt="profile picture"
-          className="object-cover w-10 h-10 rounded-full"
-        />
+        <picture>
+          <img
+            src={tweet.profileImg}
+            alt="profile picture"
+            className="object-cover w-10 h-10 rounded-full"
+          />
+        </picture>
         <div>
           <div className="flex items-center space-x-1">
             <p className="mr-1 font-bold">{tweet.username}</p>
@@ -77,11 +80,13 @@ function Tweet({ tweet }: Props) {
           </div>
           <p className="pt-1">{tweet.text}</p>
           {tweet.image && (
-            <img
-              src={tweet.image}
-              alt=""
-              className="object-cover m-5 mb-1 ml-0 rounded-lg shadow-sm max-h-60"
-            />
+            <picture>
+              <img
+                src={tweet.image}
+                alt=""
+                className="object-cover m-5 mb-1 ml-0 rounded-lg shadow-sm max-h-60"
+              />
+            </picture>
           )}
         </div>
       </div>
@@ -128,11 +133,13 @@ function Tweet({ tweet }: Props) {
           {comments.map((comment) => (
             <div key={comment._id} className="relative flex space-x-2">
               <hr className="absolute h-8 left-5 top-10 border-x border-twitter/10" />
-              <img
-                src={comment.profileImg}
-                alt=""
-                className="object-cover mt-2 rounded-full h-7 w-7"
-              />
+              <picture>
+                <img
+                  src={comment.profileImg}
+                  alt=""
+                  className="object-cover mt-2 rounded-full h-7 w-7"
+                />
+              </picture>
               <div>
                 <div className="flex items-center pace-x-1">
                   <p className="mr-1 font-bold">{comment.username}</p>

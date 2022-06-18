@@ -17,11 +17,13 @@ function Sidebar() {
 
   return (
     <div className="flex flex-col items-center col-span-2 px-4 md:items-start">
-      <img
-        className="w-10 h-10 m-3"
-        src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Twitter-logo.svg"
-        alt=""
-      />
+      <picture>
+        <img
+          className="w-10 h-10 m-3"
+          src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Twitter-logo.svg"
+          alt=""
+        />
+      </picture>
       <SidebarRow Icon={HomeIcon} title="Home" />
       <SidebarRow Icon={HashtagIcon} title="Explore" />
       <SidebarRow Icon={BellIcon} title="Notifications" />
