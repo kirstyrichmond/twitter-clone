@@ -52,7 +52,11 @@
     "typescript": "4.5.4"
   },
   "eslintConfig": {
-    "extends": "@imaginary-cloud/react",
+    "extends": [
+      "@imaginary-cloud/react",
+      "next",
+      "prettier"
+    ],
     "rules": {
       "import/no-unresolved": [
         2,
