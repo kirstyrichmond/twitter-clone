@@ -10,5 +10,5 @@ export default NextAuth({
       version: '2.0',
     }),
   ],
-  secret: process.env.NEXT_PUBLIC_SECRET,
+  secret: process.env.NEXTAUTH_SECRET,
 })
