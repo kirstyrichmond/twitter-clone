@@ -10,5 +10,8 @@ export default NextAuth({
       version: '2.0',
     }),
   ],
+  pages: {
+    signIn: '/auth/signin',
+  },
   secret: process.env.SECRET,
 })
