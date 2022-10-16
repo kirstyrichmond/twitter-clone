@@ -2,7 +2,7 @@ import NextAuth from 'next-auth'
 import TwitterProvider from 'next-auth/providers/twitter'
 
 export default NextAuth({
-  // Configure one or more authentication providers
+  secret: process.env.SECRET,
   providers: [
     TwitterProvider({
       clientId: process.env.TWITTER_CLIENT_ID,
@@ -10,13 +10,4 @@ export default NextAuth({
       version: '2.0',
     }),
   ],
-  pages: {
-    signIn: '/auth/signin',
-  },
-  callbacks: {
-    async session({ session, token, user }) {
-      return session
-    },
-  },
-  secret: process.env.SECRET,
 })
