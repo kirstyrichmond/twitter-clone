@@ -1,4 +1,4 @@
-# Instagram Clone 📸
+# Twitter Clone 
 
 Created by Kirsty Richmond.
 
